@@ -1,85 +1,13 @@
-import Image from 'next/image';
-
-export default function Logo({ width = 80, height = 80, className = '' }) {
+export default function Logo({ width = 80, height = 80, className = '' }: { width?: number; height?: number; className?: string }) {
   return (
-    <div className={`relative inline-flex items-center justify-center ${className}`}>
-      <svg
-        width={width}
-        height={height}
-        viewBox="0 0 200 200"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="drop-shadow-lg"
-      >
-        {/* Outer Blue Circle */}
-        <circle
-          cx="100"
-          cy="100"
-          r="95"
-          stroke="#0052CC"
-          strokeWidth="12"
-          fill="#FFFFFF"
-        />
-
-        {/* TB Monogram - T */}
-        <g>
-          {/* T Bar */}
-          <rect x="65" y="50" width="70" height="18" fill="#0052CC" />
-          {/* T Stem */}
-          <rect x="95" y="68" width="20" height="65" fill="#0052CC" />
-        </g>
-
-        {/* TB Monogram - B */}
-        <g>
-          {/* B Left Stem */}
-          <rect x="130" y="50" width="18" height="83" fill="#1A1A1A" />
-          {/* B Top Bulge */}
-          <path
-            d="M 148 50 Q 175 65 175 83.5 Q 175 102 148 110 L 130 110 Q 130 50 148 50"
-            fill="#0052CC"
-          />
-          {/* B Bottom Bulge */}
-          <path
-            d="M 148 110 Q 180 125 180 133 Q 180 152 148 133 L 130 133 L 130 110 L 148 110"
-            fill="#1A1A1A"
-          />
-        </g>
-
-        {/* Curved Motion Arc */}
-        <path
-          d="M 120 80 Q 160 100 140 140"
-          stroke="#0052CC"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-
-        {/* Graduation Cap */}
-        <g>
-          {/* Cap Base */}
-          <rect x="55" y="38" width="40" height="8" fill="#1A1A1A" rx="2" />
-          {/* Cap Top */}
-          <polygon points="65,28 95,28 85,15 75,15" fill="#1A1A1A" />
-          {/* Tassel */}
-          <line x1="80" y1="15" x2="80" y2="25" stroke="#0052CC" strokeWidth="2" />
-          <circle cx="80" cy="26" r="2" fill="#0052CC" />
-        </g>
-
-        {/* Computer Monitor */}
-        <g>
-          {/* Monitor Screen */}
-          <rect x="150" y="105" width="32" height="28" fill="#FFFFFF" stroke="#0052CC" strokeWidth="2" rx="3" />
-          {/* Screen Content Lines */}
-          <line x1="158" y1="112" x2="174" y2="112" stroke="#0052CC" strokeWidth="1.5" />
-          <line x1="158" y1="118" x2="174" y2="118" stroke="#0052CC" strokeWidth="1.5" />
-          <line x1="158" y1="124" x2="170" y2="124" stroke="#0052CC" strokeWidth="1.5" />
-          {/* Monitor Base */}
-          <rect x="162" y="133" width="8" height="12" fill="#0052CC" />
-          {/* Cursor Arrow */}
-          <polygon points="176,108 176,120 184,118" fill="#0052CC" />
-        </g>
-      </svg>
-    </div>
+    <svg width={width} height={height} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} role="img" aria-label="Tumwebaze Benson logo">
+      <circle cx="100" cy="100" r="94" stroke="#0052CC" strokeWidth="11" fill="#fff" />
+      <path d="M53 54h72v17H53zM81 71h20v77H81z" fill="#0052CC" />
+      <path d="M104 54h17v94h-17z" fill="#1A1A1A" />
+      <path d="M121 54c30 4 35 26 6 41h-23V54h17Z" fill="#1A1A1A" />
+      <path d="M121 95c34 4 35 31 6 53h-23V95h17Z" fill="#1A1A1A" />
+      <path d="M116 77c42 12 41 47 6 69" stroke="#0052CC" strokeWidth="8" strokeLinecap="round" />
+      <path d="m45 43 45-13 31 13-45 13-31-13Z" fill="#1A1A1A" /><path d="M76 48v18" stroke="#0052CC" strokeWidth="3" /><circle cx="76" cy="69" r="4" fill="#0052CC" /><path d="M150 106h34v31h-34z" fill="#fff" stroke="#0052CC" strokeWidth="3" /><path d="M157 114h19M157 121h19M157 128h13" stroke="#0052CC" strokeWidth="2" /><path d="m177 113 1 14 7-5" fill="#0052CC" /><path d="M162 137h10v10h-10zM154 148h27" stroke="#0052CC" strokeWidth="3" />
+    </svg>
   );
 }
