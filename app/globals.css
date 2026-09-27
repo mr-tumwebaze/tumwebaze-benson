@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #07090D;
+  color: #F5F7FA;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #38BDF8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22D3EE;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+.container-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .container-content {
+    padding: 0 20px;
+  }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(40px, 8vw, 110px);
+}
+
+h2 {
+  font-size: clamp(28px, 5vw, 48px);
+}
+
+h3 {
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+p {
+  line-height: 1.6;
+  color: #A8B0BD;
+}
+
+/* Links */
+a {
+  color: #38BDF8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #22D3EE;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #38BDF8;
+  color: #07090D;
+}
+
+.btn-primary:hover {
+  background-color: #22D3EE;
+  transform: translateX(4px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #38BDF8;
+  border: 1px solid #38BDF8;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(56, 189, 248, 0.1);
+  transform: translateX(4px);
+}
+
+/* Focus States */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 2px;
+}
+
+/* Grid & Layout */
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Animated Gradient Border */
+.border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background: linear-gradient(#0D1117, #0D1117) padding-box,
+              linear-gradient(135deg, #38BDF8, #22D3EE) border-box;
+}
+
+/* Section Padding */
+.section-py {
+  padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+  .section-py {
+    padding: 80px 0;
+  }
+}
+
+/* Smooth Transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #38BDF8, #22D3EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
